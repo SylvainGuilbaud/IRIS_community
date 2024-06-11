@@ -1,0 +1,27 @@
+{
+    "objectscript.conn": {
+        "ns": "USER",
+        "docker-compose": {
+            "internalPort": 52773,
+            "service": "iris-em"
+        },
+        "active": true,
+        "links": {
+            "License Key EM": "http://${host}:8001/csp/sys/mgr/%25CSP.UI.Portal.License.Key.zen",
+            "License Key CD": "http://${host}:8002/csp/sys/mgr/%25CSP.UI.Portal.License.Key.zen",
+            "License Key PREVIEW": "http://${host}:8003/csp/sys/mgr/%25CSP.UI.Portal.License.Key.zen",
+            "API Atelier IRIS EM": "http://${host}:8001/api/atelier/",
+            "API Atelier IRIS CD": "http://${host}:8002/api/atelier/",
+            "API Atelier IRIS PREVIEW": "http://${host}:8003/api/atelier/",
+            "IRIS API Management EM": "http://localhost:8001/api/mgmnt/",
+            "IRIS API Management CD": "http://localhost:8002/api/mgmnt/",
+            "IRIS API Management PREVIEW": "http://localhost:8003/api/mgmnt/",
+            "IRIS METRICS EM": "http://localhost:8001/api/monitor/metrics",
+            "IRIS METRICS CD": "http://localhost:8002/api/monitor/metrics",
+            "IRIS METRICS PREVIEW": "http://localhost:8003/api/monitor/metrics",
+            "Class Reference EM": "http://${host}:8001/csp/documatic/%25CSP.Documatic.cls?LIBRARY=USER",
+            "Class Reference CD": "http://${host}:8002/csp/documatic/%25CSP.Documatic.cls?LIBRARY=USER",
+            "Class Reference PREVIEW": "http://${host}:8003/csp/documatic/%25CSP.Documatic.cls?LIBRARY=USER"
+        }
+    }
+}

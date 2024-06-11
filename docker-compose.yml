@@ -1,0 +1,43 @@
+version: '3.7'
+services:
+  iris-em:
+    image: ${IMAGE_IRIS_EM} # EXTENDED MAINTENANCE
+    init: true
+    container_name: ${CONTAINER_IRIS_EM}
+    hostname: ${CONTAINER_IRIS_EM}
+    volumes:
+    - type: bind
+      source: ./iris
+      target: /iris-shared
+    command: -a /iris-shared/configure.sh
+    ports:
+      - 9001:1972
+      - 8001:52773
+
+  iris-cd:
+    image: ${IMAGE_IRIS_CD} # CONTINUOUS DELIVERY
+    init: true
+    container_name: ${CONTAINER_IRIS_CD}
+    hostname: ${CONTAINER_IRIS_CD}
+    volumes:
+    - type: bind
+      source: ./iris
+      target: /iris-shared
+    command: -a /iris-shared/configure.sh
+    ports:
+      - 9002:1972
+      - 8002:52773
+
+  iris-preview:
+    image: ${IMAGE_IRIS_PREVIEW} # DEVELOPER PREVIEW
+    init: true
+    container_name: ${CONTAINER_IRIS_PREVIEW}
+    hostname: ${CONTAINER_IRIS_PREVIEW}
+    volumes:
+    - type: bind
+      source: ./iris
+      target: /iris-shared
+    command: -a /iris-shared/configure.sh
+    ports:
+      - 9003:1972
+      - 8003:52773

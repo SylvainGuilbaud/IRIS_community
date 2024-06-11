@@ -2,9 +2,9 @@
 
 ## This is a simple docker-compose demo that spins up three containers: 
 
-* [iris community EXTENDED MAINTENANCE](./docker-compose.yml)
-* [iris community CONTINUOUS DELIVERY](./docker-compose.yml)
-* [iris community DEVELOPER PREVIEW](./docker-compose.yml)
+* [IRIS community EXTENDED MAINTENANCE](./docker-compose.yml)
+* [IRIS community CONTINUOUS DELIVERY](./docker-compose.yml)
+* [IRIS community DEVELOPER PREVIEW](./docker-compose.yml)
 
 ## How to run it
 

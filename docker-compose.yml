@@ -8,8 +8,8 @@ services:
     volumes:
     - type: bind
       source: ./iris
-      target: /iris-shared
-    command: -a /iris-shared/configure.sh
+      target: /iris
+    command: -a /iris/configure.sh
     ports:
       - 9001:1972
       - 8001:52773
@@ -22,8 +22,8 @@ services:
     volumes:
     - type: bind
       source: ./iris
-      target: /iris-shared
-    command: -a /iris-shared/configure.sh
+      target: /iris
+    command: -a /iris/configure.sh
     ports:
       - 9002:1972
       - 8002:52773
@@ -36,8 +36,8 @@ services:
     volumes:
     - type: bind
       source: ./iris
-      target: /iris-shared
-    command: -a /iris-shared/configure.sh
+      target: /iris
+    command: -a /iris/configure.sh
     ports:
       - 9003:1972
       - 8003:52773

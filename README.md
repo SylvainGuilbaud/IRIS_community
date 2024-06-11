@@ -3,8 +3,8 @@
 ## This is a simple docker-compose demo that spins up three containers: 
 
 * [iris community EXTENDED MAINTENANCE](./docker-compose.yml)
-* [iris-test community CONTINUOUS DELIVERY](./docker-compose.yml)
-* [iris-dev community DEVELOPER PREVIEW](./docker-compose.yml)
+* [iris community CONTINUOUS DELIVERY](./docker-compose.yml)
+* [iris community DEVELOPER PREVIEW](./docker-compose.yml)
 
 ## How to run it
 

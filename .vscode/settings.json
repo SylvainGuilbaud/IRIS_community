@@ -3,7 +3,7 @@
         "ns": "USER",
         "docker-compose": {
             "internalPort": 52773,
-            "service": "iris-em"
+            "service": "iris"
         },
         "active": true,
         "links": {

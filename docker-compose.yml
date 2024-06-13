@@ -7,11 +7,11 @@ services:
     hostname: ${CONTAINER_IRIS_EM}
     volumes:
     - type: bind
-      source: ./iris
-      target: /iris
-    command: -a /iris/configure.sh
+      source: ./IRIS
+      target: /IRIS
+    command: -a /IRIS/configure.sh
     ports:
-      - 9001:1972
+      - 19721:1972
       - 8001:52773
 
   iris-cd:
@@ -21,11 +21,11 @@ services:
     hostname: ${CONTAINER_IRIS_CD}
     volumes:
     - type: bind
-      source: ./iris
-      target: /iris
-    command: -a /iris/configure.sh
+      source: ./IRIS
+      target: /IRIS
+    command: -a /IRIS/configure.sh
     ports:
-      - 9002:1972
+      - 19722:1972
       - 8002:52773
 
   iris-preview:
@@ -35,9 +35,9 @@ services:
     hostname: ${CONTAINER_IRIS_PREVIEW}
     volumes:
     - type: bind
-      source: ./iris
-      target: /iris
-    command: -a /iris/configure.sh
+      source: ./IRIS
+      target: /IRIS
+    command: -a /IRIS/configure.sh
     ports:
-      - 9003:1972
+      - 19723:1972
       - 8003:52773

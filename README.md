@@ -6,11 +6,13 @@
 * [IRIS community CONTINUOUS DELIVERY](./docker-compose.yml)
 * [IRIS community DEVELOPER PREVIEW](./docker-compose.yml)
 
-## How to run it
+## start/stop 
 
 * [start.sh](./start.sh) - spins up all containers via docker-compose and 
     invokes iris/configure.sh in the iris containers
 * [stop.sh](./stop.sh) - removes all containers
+
+## configure.sh
 * [iris/configure.sh](./iris/configure.sh) - configures the IRIS container's CSPConfigName
 
 ## IRIS Management Portal
@@ -39,3 +41,7 @@ With this pod, the user can access each instance's Management Portal immediately
 * [License Key EM](http://localhost:8001/csp/sys/mgr/%25CSP.UI.Portal.License.Key.zen)
 * [License Key CD](http://localhost:8002/csp/sys/mgr/%25CSP.UI.Portal.License.Key.zen)
 * [License Key PREVIEW](http://localhost:8003/csp/sys/mgr/%25CSP.UI.Portal.License.Key.zen)
+### Management Portal
+* [Management Portal EM](http://localhost:8001/csp/sys/UtilHome.csp)
+* [Management Portal CD](http://localhost:8002/csp/sys/UtilHome.csp)
+* [Management Portal PREVIEW](http://localhost:8003/csp/sys/UtilHome.csp)

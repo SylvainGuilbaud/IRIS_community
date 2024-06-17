@@ -1,6 +1,6 @@
 # Example of using 3 IRIS Community instances (EM, CD, preview)
 
-## This is a simple docker-compose demo that spins up three containers: 
+## This is a simple docker-compose example that spins up three containers based on the 3 latest community editions of IRIS: 
 
 * [IRIS community EXTENDED MAINTENANCE](./docker-compose.yml)
 * [IRIS community CONTINUOUS DELIVERY](./docker-compose.yml)

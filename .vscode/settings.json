@@ -7,6 +7,9 @@
         },
         "active": true,
         "links": {
+            "EM Management Portal": "http://${host}:8001/csp/sys/UtilHome.csp",
+            "CD Management Portal": "http://${host}:8002/csp/sys/UtilHome.csp",
+            "PREVIEW Management Portal": "http://${host}:8003/csp/sys/UtilHome.csp",
             "License Key EM": "http://${host}:8001/csp/sys/mgr/%25CSP.UI.Portal.License.Key.zen",
             "License Key CD": "http://${host}:8002/csp/sys/mgr/%25CSP.UI.Portal.License.Key.zen",
             "License Key PREVIEW": "http://${host}:8003/csp/sys/mgr/%25CSP.UI.Portal.License.Key.zen",

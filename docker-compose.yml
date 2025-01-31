@@ -1,27 +1,27 @@
 services:
-  iris-em:
-    image: ${IMAGE_IRIS_EM} # EXTENDED MAINTENANCE
-    init: true
-    container_name: ${CONTAINER_IRIS_EM}
-    hostname: ${CONTAINER_IRIS_EM}
-    volumes:
-    - type: bind
-      source: ./IRIS
-      target: /IRIS
-    - type: bind
-      source: ./volumes
-      target: /volumes
-    - "/etc/timezone:/etc/timezone:ro"
-    - "/etc/localtime:/etc/localtime:ro"
-    command: -a /IRIS/configure.sh
-    ports:
-      - 19721:1972
-      - 8001:52773
-    environment:
-      # - ISC_DATA_DIRECTORY=/volumes/${EXTENDED_MAINTENANCE}
-      - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
-      - TINI_SUBREAPER=1
-      # - TZ=Europe/Paris
+  # iris-em:
+  #   image: ${IMAGE_IRIS_EM} # EXTENDED MAINTENANCE
+  #   init: true
+  #   container_name: ${CONTAINER_IRIS_EM}
+  #   hostname: ${CONTAINER_IRIS_EM}
+  #   volumes:
+  #   - type: bind
+  #     source: ./IRIS
+  #     target: /IRIS
+  #   - type: bind
+  #     source: ./volumes
+  #     target: /volumes
+  #   - "/etc/timezone:/etc/timezone:ro"
+  #   - "/etc/localtime:/etc/localtime:ro"
+  #   command: -a /IRIS/configure.sh
+  #   ports:
+  #     - 19721:1972
+  #     - 8001:52773
+  #   environment:
+  #     # - ISC_DATA_DIRECTORY=/volumes/${EXTENDED_MAINTENANCE}
+  #     - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
+  #     - TINI_SUBREAPER=1
+  #     # - TZ=Europe/Paris
 
   iris-cd:
     image: ${IMAGE_IRIS_CD} # CONTINUOUS_DELIVERY

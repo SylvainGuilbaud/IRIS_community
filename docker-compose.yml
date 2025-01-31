@@ -17,9 +17,14 @@ services:
     ports:
       - 19721:1972
       - 8001:52773
+    environment:
+      # - ISC_DATA_DIRECTORY=/volumes/${EXTENDED_MAINTENANCE}
+      - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
+      - TINI_SUBREAPER=1
+      # - TZ=Europe/Paris
 
   iris-cd:
-    image: ${IMAGE_IRIS_CD} # CONTINUOUS DELIVERY
+    image: ${IMAGE_IRIS_CD} # CONTINUOUS_DELIVERY
     init: true
     container_name: ${CONTAINER_IRIS_CD}
     hostname: ${CONTAINER_IRIS_CD}
@@ -36,9 +41,14 @@ services:
     ports:
       - 19722:1972
       - 8002:52773
+    environment:
+      # - ISC_DATA_DIRECTORY=/volumes/${CONTINUOUS_DELIVERY}
+      - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
+      - TINI_SUBREAPER=1
+      - TZ=Europe/Paris
 
   iris-preview:
-    image: ${IMAGE_IRIS_PREVIEW} # DEVELOPER PREVIEW
+    image: ${IMAGE_IRIS_PREVIEW} # DEVELOPER_PREVIEW
     init: true
     container_name: ${CONTAINER_IRIS_PREVIEW}
     hostname: ${CONTAINER_IRIS_PREVIEW}
@@ -49,9 +59,14 @@ services:
     - type: bind
       source: ./volumes
       target: /volumes
-    - "/etc/timezone:/etc/timezone:ro"
-    - "/etc/localtime:/etc/localtime:ro"
+    # - "/etc/timezone:/etc/timezone:ro"
+    # - "/etc/localtime:/etc/localtime:ro"
     command: -a /IRIS/configure.sh
     ports:
       - 19723:1972
       - 8003:52773
+    environment:
+      # - ISC_DATA_DIRECTORY=/volumes/${DEVELOPER_PREVIEW}
+      - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
+      - TINI_SUBREAPER=1
+      - TZ=Europe/Paris
